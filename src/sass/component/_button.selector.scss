@@ -1,0 +1,54 @@
+.button-selector-container {
+	align-self: flex-end;
+	margin-right: 1.5rem;
+	background-color: #edf0f5;
+	width: 27.5rem;
+	height: 4.5rem;
+	outline: none;
+	border-radius: 100px;
+	box-shadow: $shadow-dark;
+
+	overflow: hidden;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.items-selector {
+		display: none;
+	}
+
+	.item {
+		height: 90%;
+
+		flex-grow: 1;
+		flex-basis: 50%;
+		border-radius: 100px;
+		z-index: 2000;
+		text-align: center;
+		cursor: pointer;
+
+		position: relative;
+		&--label {
+			color: lighten(#555961, 30%);
+			font-size: 1.6rem;
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+
+			@include absCenter;
+		}
+	}
+
+	
+	.items-selector:checked + label {
+		background-color: white;
+		
+		border-radius: 100px;
+		box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+
+		span {
+			color: $color-primary;
+		}
+	}
+}

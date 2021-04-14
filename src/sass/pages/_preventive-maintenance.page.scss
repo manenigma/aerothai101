@@ -1,0 +1,46 @@
+.pmi-container {
+	// background-position: top right;
+	// height: 100%;
+	font-size: 1.6rem;
+	color: $color-primary;
+
+	// width: 100%;
+	// margin: 0 2.5rem;
+	padding: 2.5rem 2.5rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2.5rem;
+
+	.header {
+		align-self: flex-end;
+		margin-right: 1.5rem;
+		letter-spacing: 0.4rem;
+		font-size: 2.4rem;
+		color: $bgcolor-primary-lightest;
+		border-bottom: 0.1rem solid $color-primary-dark;
+	}
+
+	.items-container {
+		// background-color: #ccc;
+		padding: 10px;
+		// height: 500px;
+		width: 100%;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		// align-items: center;
+		align-items: stretch;
+		gap: 2.5rem;
+
+		flex-wrap: wrap;
+		align-content: center;
+	}
+
+	.footer {
+
+	}
+}

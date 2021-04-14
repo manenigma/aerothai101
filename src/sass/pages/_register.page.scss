@@ -1,0 +1,27 @@
+.register-container {
+	background-image: url("../../assets/bg-register.jpg");
+	background-size: cover;
+	background-position: center top;
+	width: 100vw;
+	height: 100vh;
+	padding: 2.4rem 7.6rem;
+
+	@include absCenter;
+
+	// margin: 0 7.6rem;
+
+	// backface-visibility: hidden;
+	.register-box {
+		background-color: white;
+		border-radius: 1.5rem;
+		overflow: hidden;
+		box-shadow: $shadow-darker;
+		height: 100%;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+
+		position: relative;
+	}
+}

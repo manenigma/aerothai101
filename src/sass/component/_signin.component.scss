@@ -1,0 +1,199 @@
+.signin-section {
+	font-size: 1.6rem;
+
+	font-size: 1.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 3rem;
+
+	.signin {
+		&--title {
+			font-size: 3rem;
+			color: antiquewhite;
+			font-weight: 600;
+			color: $color-primary;
+		}
+
+		&--option {
+			margin: 2rem 0;
+			display: flex;
+			gap: 2rem;
+
+			.option-box {
+				color: $bgcolor-primary-light;
+				width: 4.2rem;
+				height: 4.2rem;
+				padding: 1rem;
+				border-radius: 200%;
+				border: 0.1rem solid;
+				margin-top: -3rem;
+				box-shadow: $shadow-light;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+
+				&--icon {
+					fill: $bgcolor-primary;
+					width: 2.8rem;
+					height: 2.8rem;
+				}
+			}
+		}
+
+		&--description {
+			font-size: 1.4rem;
+			font-weight: 300;
+			color: $bgcolor-primary-light;
+		}
+
+		&--form {
+			width: 32rem;
+
+			display: flex;
+			flex-direction: column;
+			gap: 1.4rem;
+
+			.form-box {
+				height: 3.6rem;
+
+				position: relative;
+
+				&--input {
+					font-family: inherit;
+					height: 3.6rem;
+					width: 100%;
+					border: none;
+					outline: none;
+					background-color: lighten($color-primary-lightest, 20%);
+					padding-left: 4rem;
+
+					font-size: 1.6rem;
+					letter-spacing: 0.1em;
+					color: $bgcolor-primary;
+
+					&:focus {
+						background-color: lighten($color-primary-lightest, 10%);
+					}
+
+					&::placeholder {
+						font-family: "Open Sans Condensed";
+						font-size: 1.6rem;
+						font-weight: 100;
+						color: $bgcolor-primary-light;
+					}
+				}
+
+				input[type="password"] {
+					letter-spacing: 0.4em;
+
+					&::placeholder {
+						letter-spacing: 0em;
+					}
+				}
+
+				&--icon {
+					width: 2rem;
+					height: 2rem;
+					fill: $bgcolor-primary-light;
+					margin-left: 1rem;
+
+					position: absolute;
+					top: 0.8rem;
+					left: 0;
+
+					// fill: $bgcolor-primary;
+				}
+
+				&--input:focus ~ .form-box--icon {
+					fill: $bgcolor-primary;
+				}
+			}
+		}
+
+		&--footer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 3rem;
+
+			.signin--forgot {
+				font-size: 1.8rem;
+				font-weight: 300;
+				color: $bgcolor-primary;
+				cursor: pointer;
+				padding-bottom: 0.7rem;
+				border-bottom: 0.1rem solid transparent;
+
+				align-self: center;
+				text-align: center;
+
+				transition: all 0.2s;
+
+				&:hover {
+					border-bottom: 0.1rem solid $bgcolor-primary-light;
+				}
+			}
+		}
+	}
+
+	// &,
+	// &2,
+	// &3,
+	// &4 {
+	// 	font-size: 1.6rem;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: center;
+	// 	align-items: center;
+	// 	gap: 3rem;
+	// }
+	// &2 {
+	// 	background-blend-mode: overlay;
+
+	// 	grid-column: 3 / span 1;
+	// 	grid-row: 1 / 2;
+	// 	z-index: 100;
+
+	// 	animation: gridMoveLeftS 3s linear forwards;
+
+	// 	&--button {
+	// 		background-color: azure;
+	// 		width: 7.5rem;
+	// 		padding: 0.6rem 1.2rem;
+	// 		text-align: center;
+	// 	}
+	// }
+
+	// &3 {
+	// 	background-color: aquamarine;
+	// 	grid-column: 3 / span 1;
+	// 	grid-row: 1 / 2;
+
+	// 	&--header {
+	// 		color: antiquewhite;
+	// 		animation: moveInRight 1.8s linear 1.4s forwards;
+	// 		z-index: 200;
+	// 	}
+	// }
+
+	// &4 {
+	// 	background-color: antiquewhite;
+
+	// 	grid-column: 1 / span 2;
+	// 	grid-row: 1 / 2;
+
+	// 	animation: gridMoveRightX 3s linear forwards;
+	// }
+}
+
+.signin-section {
+	background-color: white;
+	grid-column: 2 / span 2;
+	grid-row: 1 / 2;
+
+	animation: gridMoveToLeftX 2s linear forwards;
+}

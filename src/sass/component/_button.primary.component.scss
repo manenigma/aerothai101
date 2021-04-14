@@ -1,0 +1,24 @@
+.button--primary {
+	font-family: inherit;
+	font-size: 1.6rem;
+	padding: 1rem 0;
+	width: 16rem;
+	border: transparent;
+	border-radius: 100px;
+	outline: none;
+	cursor: pointer;
+	background-color: $color-primary;
+	color: $bgcolor-primary-lightest;
+	text-transform: uppercase;
+	text-align: center;
+
+	transition: all .2s;
+
+	&:hover {
+		animation: pulsate 1s infinite;
+	}
+
+	&:active {
+		animation: none;
+	}
+}

@@ -1,0 +1,37 @@
+/* Abtracts */
+@import "./abstracts/variables";
+@import "./abstracts/functions";
+@import "./abstracts/mixins";
+
+/* Base */
+@import "./base/base";
+@import "./base/animations";
+@import "./base/typography";
+@import "./base/utilities";
+
+/* Layout */
+@import "./layout/signup-in-option";
+
+/* Component */
+@import "./component/signin.component";
+@import "./component/button.primary.component";
+@import "./component/button.secondary.component";
+@import "./component/signin-option.component";
+@import "./component/signup-option.component";
+@import "./component/signup-option-button.component";
+@import "./component/header.component";
+@import "./component/card.component";
+@import "./component/button.selector";
+@import "./component/button.tertiary";
+
+
+/* Page */
+@import "./pages/home.page";
+@import "./pages/register.page";
+@import "./pages/preventive-maintenance.page";
+
+.App {
+	background-image: url("../assets/bg-register.jpg");
+	background-size: cover;
+	background-position: center top;
+}

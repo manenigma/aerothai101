@@ -1,0 +1,50 @@
+.signup-in-option {
+	// background-image: $gradient-primary-alpha, url("../../assets/bg-register.jpg");
+	// background-blend-mode: multiply;
+	// background-size: cover;
+	// background-position: right;
+
+	color: $bgcolor-primary-lightest;
+	display: flex;
+	gap: 5rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+
+	font-size: 1.6rem;
+	color: white;
+
+	&__title,
+	&__description {
+		z-index: 200;
+	}
+	&__title {
+		font-size: 3rem;
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		font-weight: 100;
+
+		span {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	&--fake {
+		// background-color: aquamarine;
+		padding: 1rem 0rem;
+		border: 0.1rem solid transparent;
+		outline: none;
+		visibility: hidden;
+	}
+}
+
+
+
+
+
+

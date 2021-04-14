@@ -1,0 +1,10 @@
+.signup-option {
+	// background-color: aquamarine;
+
+	grid-column: 3 / span 1;
+	grid-row: 1 / 2;
+
+	.movein--right {
+		animation: moveInRight 1.7s linear 0.5s forwards;
+	}
+}

@@ -1,0 +1,214 @@
+.card {
+	// FUNCTIONALITY
+	flex-grow: 1;
+	flex-basis: 25%;
+	// height: 54rem;
+	// height: auto;
+	perspective: 150rem;
+	-moz-perspective: 150rem;
+	// overflow: hidden;
+	// background-color: $bgcolor-primary-lightest;
+	// border: 0.2rem solid transparent;
+	// border-radius: 3rem;
+	// overflow: hidden;
+	// cursor: pointer;
+	// box-shadow: $shadow-darker;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1rem;
+
+	position: relative;
+
+	&:hover {
+		// border: 0.2rem solid $color-secondary;
+	}
+
+	&__side {
+		font-size: 2rem;
+		height: 100%;
+		// height: auto;
+		transition: all 0.8s ease;
+		width: 100%;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		border-radius: 1rem;
+		// position: absolute;
+		// top: 0;
+		// left: 0;
+		overflow: hidden;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+		&--front {
+			background-color: $color-white;
+		}
+
+		&--back {
+			background-color: $color-tertiary-dark;
+			color: $color-white;
+			transform: rotateY(180deg);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+	}
+	&:hover &__side--back {
+		transform: rotateY(0deg);
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	// FRONT SIDE STYLING
+	&__image {
+		background-size: cover;
+		background-image: $gradient-tertiary-alpha;
+		height: 30rem;
+		background-blend-mode: screen;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+		position: relative;
+		.image {
+			fill: $color-secondary;
+			@include absCenter;
+		}
+	}
+
+	&__heading {
+		text-align: right;
+		position: absolute;
+		top: 20rem;
+		right: 2rem;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__heading-span {
+		padding: 1rem 1.5rem;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+		font-size: 2.2rem;
+		font-weight: 600;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $color-secondary;
+		background-image: $gradient-tertiary-alpha;
+		align-self: flex-end;
+
+		&--title {
+		}
+		&--name {
+		}
+	}
+
+	&__details {
+		padding: 3rem;
+
+		ul {
+			list-style: none;
+			width: 80%;
+			margin: 0 auto;
+
+			li {
+				text-align: center;
+				font-size: 1.6rem;
+				padding: 1rem;
+
+				&:not(:last-child) {
+					border-bottom: 1px solid $color-grey-light-2;
+				}
+			}
+		}
+	}
+
+	// BACK SIDE STYLING
+	&__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		text-align: center;
+	}
+
+	&__price-box {
+		text-align: center;
+		// color: $color-white;
+		color: $color-black;
+		margin-bottom: 8rem;
+	}
+
+	&__price-only {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value {
+		font-size: 6rem;
+		font-weight: 100;
+	}
+
+	@media only screen and (max-width: 56.25em), only screen and (hover: none) {
+		height: auto;
+		border-radius: 1rem;
+		background-color: $color-white;
+		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+		justify-content: space-between;
+		align-self: stretch;
+
+		&__side {
+			height: auto;
+			position: relative;
+			box-shadow: none;
+
+			&--back {
+				transform: rotateY(0deg);
+				clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+			}
+		}
+
+		// &:hover {
+		// 	align-self: flex-start;
+		// }
+
+		&:hover &__side--front {
+			transform: rotateY(0deg);
+		}
+		&:hover &__side--back {
+			transform: rotateY(0deg);
+			position: relative;
+		}
+
+		&__details {
+			padding: 1rem 3rem;
+		}
+
+		// BACK SIDE STYLING
+		&__cta {
+			position: relative;
+			top: 0;
+			left: 0;
+			transform: translate(0);
+			width: 100%;
+			padding: 7rem 4rem 4rem;
+		}
+
+		&__price-box {
+			margin-bottom: 3rem;
+		}
+
+		&__price-value {
+			font-size: 4rem;
+		}
+	}
+}
